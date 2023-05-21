@@ -15,18 +15,27 @@ const fetcher = async ({ url, method, body, json = true }) => {
   }
 }
 
-export const register = async (user) => {
-  return await fetcher({
+export const register = (user) => {
+  return fetcher({
     url: '/api/register',
     method: 'POST',
     body: user,
   });
 }
 
-export const signin = async (user) => {
-  return await fetcher({
+export const signin = (user) => {
+  return fetcher({
     url: '/api/signin',
     method: 'POST',
     body: user,
+  });
+}
+
+export const createNewProject = (name) => {
+  return fetcher({
+    url: '/api/projects',
+    method: 'POST',
+    body: { name },
+    json: true,
   });
 }

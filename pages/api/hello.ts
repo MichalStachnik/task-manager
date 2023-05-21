@@ -1,4 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+// runs in Edge runtime
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {
